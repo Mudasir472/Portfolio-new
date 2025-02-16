@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Home from "./Home";
 import Header from "./Components/Navbar";
 import ScrollProgressBar from "./Components/ScrollProgressBar";
+import Footer from "./Components/Footer";
 
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
+        <Footer />
         <ScrollProgressBar />
       </Router>
     </>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import M from "../assets/Muddu.png"
 import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
     const location = useLocation();
@@ -29,9 +30,10 @@ const Navbar = () => {
             <div className="flex  items-center justify-between  py-4 container mx-auto">
                 <div className="flex items-center gap-4">
                     <Link to={'/'}>
-                        <div className="rounded-full bg-[#6140a0] w-[52px] h-[52px] flex items-center justify-center cursor-pointer  text-white p-2">
+                        {/* <div className="rounded-full bg-[#6140a0] w-[52px] h-[52px] flex items-center justify-center cursor-pointer  text-white p-2">
                             <span className=" font-bold text-2xl">M</span>
-                        </div>
+                        </div> */}
+                        <img className="h-[56px]" src={M} alt="" />
                     </Link>
                     <p className="text-white text-sm">bhatmuddu472@gmail.com</p>
                 </div>
