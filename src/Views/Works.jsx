@@ -55,50 +55,48 @@ function Works() {
             ? projects
             : projects.filter((project) => project.category.includes(selected));
 
-    return (
-        <div id='works' className="works container mx-auto pt-[1rem]">
-            <div className="worksMain flex flex-col gap-[1rem] my-[4rem] mb-[7rem]">
-                <div className="flex flex-col gap-[1rem] items-center ">
+    return(
+        <div id="works" className="works container mx-auto pt-4 px-4 sm:px-8">
+            <div className="worksMain flex flex-col gap-4 my-16 mb-28">
+                <div className="flex flex-col gap-4 items-center">
                     <h1
                         style={{
                             background: "linear-gradient(90deg, #8750f7 0%, #fff 100%)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }}
-                        className="text-[2.5rem] font-[900]"
+                        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold"
                     >
                         My Recent Works
                     </h1>
-                    <p className="w-[58%] text-center">
+                    <p className="w-full sm:w-4/5 lg:w-3/5 text-center">
                         Showcasing a collection of my latest projects, reflecting creativity, functionality, and a commitment to excellence. Each work highlights my expertise and dedication to delivering impactful solutions.
                     </p>
-                    <div className="flex items-center justify-between w-[30%] p-[13px] my-[1.5rem] h-[3rem] rounded-2xl bg-[black]">
+                    <div className="flex items-center justify-between w-full sm:w-3/5 lg:w-1/3 p-2 my-6 h-12 rounded-2xl bg-black">
                         {["All", "Frontend", "FullStack", "Backend"].map((category) => (
                             <div
                                 key={category}
-                                className={`h-[33px] p-[15px] flex items-center justify-center rounded-2xl ${selected === category
+                                className={`h-10 px-4 flex items-center justify-center rounded-2xl ${selected === category
                                     ? "bg-gradient-to-r from-[#8750f7] to-[#2a1454]"
                                     : "bg-transparent"
                                     } transition-all duration-500 cursor-pointer`}
                                 onClick={() => setSelected(category)}
                             >
-                                <p>{category}</p>
+                                <p className="text-sm sm:text-base">{category}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between gap-[3rem]">
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8">
                     <AnimatePresence>
                         {filteredProjects.map((project, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, scale: 0.9, }}
+                                initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                whileHover={{
-                                    scale: 1.04,
-                                }}
+                                whileHover={{ scale: 1.04 }}
                             >
                                 <WorkProjects
                                     key={index}
