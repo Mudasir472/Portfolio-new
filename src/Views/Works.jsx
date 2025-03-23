@@ -10,7 +10,7 @@ import studyMart from "../assets/studyMart.png";
 
 function Works() {
     const [selected, setSelected] = useState("All");
-
+    const [hovered, setHovered] = useState(0);
     const projects = [
         {
             img: studyMart,
@@ -55,7 +55,7 @@ function Works() {
             ? projects
             : projects.filter((project) => project.category.includes(selected));
 
-    return(
+    return (
         <div id="works" className="works container mx-auto pt-4 px-4 sm:px-8">
             <div className="worksMain flex flex-col gap-4 my-16 mb-28">
                 <div className="flex flex-col gap-4 items-center">
@@ -100,10 +100,13 @@ function Works() {
                             >
                                 <WorkProjects
                                     key={index}
+                                    index={index + 1}
                                     img={project.img}
                                     heading={project.heading}
                                     desc={project.desc}
                                     link={project.link}
+                                    hovered={hovered}
+                                    setHovered={setHovered}
                                 />
                             </motion.div>
                         ))}

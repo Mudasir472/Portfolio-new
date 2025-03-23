@@ -44,7 +44,7 @@ function Services() {
                                 index={index + 1}
                                 title={service.title}
                                 description={service.description}
-                                hovered={hovered} // Pass the current hovered index
+                                hovered={hovered} 
                                 setHovered={setHovered} // Pass the setter function
                             />
                         ))}
