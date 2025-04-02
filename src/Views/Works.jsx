@@ -7,11 +7,20 @@ import wanderlust1 from "../assets/wanderlust1.png";
 import zakat1 from "../assets/zakat1.png";
 import electronics2 from "../assets/electronics2.png";
 import studyMart from "../assets/studyMart.png";
+import studyHive from "../assets/studyHive.png";
+
 
 function Works() {
     const [selected, setSelected] = useState("All");
     const [hovered, setHovered] = useState(0);
     const projects = [
+        {
+            img: studyHive,
+            heading: "StyleHive",
+            desc: "StyleHive is a fashion and lifestyle platform where users can discover, share, and explore the latest trends, outfits, and accessories.",
+            category: ["All", "FullStack"],
+            link: "https://style-hive-an-fashion-ecommerce.vercel.app/",
+        },
         {
             img: studyMart,
             heading: "StudyMart",
