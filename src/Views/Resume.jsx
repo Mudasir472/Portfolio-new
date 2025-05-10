@@ -9,6 +9,11 @@ function Resume() {
             location: "Hyderabad, India",
         },
         {
+            heading: "Intern, MERN Stack, Opam Technologies",
+            date: "Feb 2025 - May 2024",
+            location: "Hyderabad (Remote), India",
+        },
+        {
             heading: "Participant, IDE Bootcamp",
             date: "January 2024",
             location: "Hyderabad, India",

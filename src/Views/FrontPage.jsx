@@ -27,7 +27,7 @@ function FrontPage() {
 
                         {/* CV and Socials */}
                         <div className="cv flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                            <Link to={`https://drive.google.com/file/d/1bWheIPzsw_NHMHL0KCHFSgbJ-B4308Qh/view`} target="_blank" rel="noopener noreferrer">
+                            <Link to={`https://drive.google.com/file/d/1MLOBSfakfJxKTAjsb03hc6ZBk2Eqn6LY/view?usp=drive_linkhttps://drive.google.com/file/d/1MLOBSfakfJxKTAjsb03hc6ZBk2Eqn6LY/view?usp=drive_link`} target="_blank" rel="noopener noreferrer">
                                 <button className="cursor-pointer capitalize font-medium border border-[#8750f7] text-[#8750f7] w-[160px] p-[10px] rounded-3xl transition duration-300 ease-in-out hover:bg-[#8750f7] hover:text-white">
                                     Download CV <span><i className="bi bi-download text-xl"></i></span>
                                 </button>
