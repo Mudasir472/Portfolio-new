@@ -22,16 +22,22 @@ function Resume() {
 
     const education = [
         {
-            heading: "B-Tech (CS & IT)",
+            heading: "B-Tech(CS & IT), (8.48 cgpa)",
             location: "Hyderabad, India",
-            date: "2021-2024",
-            score: "8.51 CGPA",
+            date: "2021-2025",
+            score: "8.48 CGPA",
         },
         {
-            heading: "Intermediate (PCM)(86.6%)",
+            heading: "Intermediate (PCM),(86.6%)",
             location: "J&K, India",
-            date: "2019-2021",
+            date: "2019-2020",
             score: "86.6%",
+        },
+        {
+            heading: "Matriculation(72%)",
+            location: "J&K, India",
+            date: "2017-2018",
+            score: "72%",
         },
     ];
     const professional = [

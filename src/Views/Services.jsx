@@ -11,14 +11,15 @@ function Services() {
         },
         {
             id: 2,
-            title: "Content Writing",
-            description: "Crafting engaging, clear, and impactful content tailored to captivate your audience and effectively convey your message.",
+            title: "DSA with Java",
+            description: "Offering assistance with Data Structures and Algorithms using Java, including problem-solving strategies, interview preparation, and conceptual clarity for students and professionals.",
         },
         {
             id: 3,
-            title: "UI/UX Design",
-            description: "Designing intuitive, visually appealing, and user-centric interfaces to deliver seamless and engaging user experiences.",
+            title: "Content Writing",
+            description: "Crafting engaging, clear, and impactful content tailored to captivate your audience and effectively convey your message.",
         },
+
     ];
     return (
         <>
@@ -44,7 +45,7 @@ function Services() {
                                 index={index + 1}
                                 title={service.title}
                                 description={service.description}
-                                hovered={hovered} 
+                                hovered={hovered}
                                 setHovered={setHovered} // Pass the setter function
                             />
                         ))}
