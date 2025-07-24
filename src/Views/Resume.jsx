@@ -30,13 +30,13 @@ function Resume() {
         {
             heading: "Intermediate (PCM),(86.6%)",
             location: "J&K, India",
-            date: "2019-2020",
+            date: "2020-2022",
             score: "86.6%",
         },
         {
             heading: "Matriculation(72%)",
             location: "J&K, India",
-            date: "2017-2018",
+            date: "2015-2017",
             score: "72%",
         },
     ];
