@@ -24,7 +24,7 @@ function Resume() {
         {
             heading: "B-Tech(CS & IT), (8.48 cgpa)",
             location: "Hyderabad, India",
-            date: "2019-2023",
+            date: "2020-2023",
             score: "8.48 CGPA",
         },
         {
