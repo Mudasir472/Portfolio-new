@@ -5,15 +5,21 @@ function Services() {
     const [hovered, setHovered] = useState(0);
     const servicesData = [
         {
+            id: 4,
+            title: "Senior Technical Trainer",
+            description: "Providing guidance and mentorship in web development, Java programming, and DSA, helping students and professionals enhance their technical skills through structured learning, practical projects, and real-world problem-solving.",
+        },
+        {
             id: 1,
-            title: "Web Development",
+            title: "Web Development(MERN)",
             description: "Creating modern, responsive, and user-friendly websites tailored to your needs, ensuring functionality, aesthetics, and seamless performance.",
         },
         {
             id: 2,
-            title: "DSA with Java",
+            title: "DSA with Java/c++",
             description: "Offering assistance with Data Structures and Algorithms using Java, including problem-solving strategies, interview preparation, and conceptual clarity for students and professionals.",
         },
+       
         {
             id: 3,
             title: "Content Writing",

@@ -8,6 +8,7 @@ import zakat1 from "../assets/zakat1.png";
 import electronics2 from "../assets/electronics2.png";
 import studyMart from "../assets/studyMart.png";
 import studyHive from "../assets/studyHive.png";
+import greenLeaf from "../assets/greenLeaf.png";
 
 
 function Works() {
@@ -56,6 +57,13 @@ function Works() {
             category: ["All", "Frontend"],
             link: "https://mudasir472.github.io/Shop-OP/",
         },
+        {
+            img: greenLeaf,
+            heading: "GreenLead Market",
+            desc: "Frontend of an ECommerce Website",
+            category: ["All", "Frontend"],
+            link: "https://green-leaf-market.vercel.app/",
+        }
     ];
 
     // Filter projects based on the selected category
