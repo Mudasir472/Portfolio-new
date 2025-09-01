@@ -48,7 +48,7 @@ function Works() {
             heading: "Muddu-Electronics",
             desc: "An E-Commerce Website",
             category: ["All", "Frontend"],
-            link: "https://github.com/Mudasir472/Muddu-electronics-Backend",
+            link: "https://muddu-electronics.vercel.app/",
         },
         {
             img: shop1,
