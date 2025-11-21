@@ -1,4 +1,4 @@
-import imgg from "../assets/photo.png"
+import imgg from "../assets/professional.jpg"
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
