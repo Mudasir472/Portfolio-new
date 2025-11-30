@@ -67,7 +67,7 @@ function Skills() {
     ]
     return (
         <div id="skill" className="skills container mx-auto px-4">
-            <div className="skillsMain flex flex-col gap-4 items-center py-20">
+            <div className="skillsMain flex flex-col gap-4 items-center pb-20">
                 {/* Title */}
                 <h1
                     style={{

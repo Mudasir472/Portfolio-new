@@ -1,3 +1,4 @@
+import Achievements from "./Views/Achievements";
 import Contact from "./Views/Contact";
 import FrontPage from "./Views/FrontPage";
 import Resume from "./Views/Resume";
@@ -11,6 +12,7 @@ function Home() {
         <Services />
         <Works />
         <Resume />
+        <Achievements />
         <Skills />
         <Contact />
     </>);
