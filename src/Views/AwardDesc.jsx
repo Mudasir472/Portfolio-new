@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function AwardDesc({ img, heading, desc, link='#', hovered }) {
+function AwardDesc({ img, heading, desc, link = '#', hovered }) {
 
     return (
         <div
@@ -13,7 +13,7 @@ function AwardDesc({ img, heading, desc, link='#', hovered }) {
                 src={img}
                 alt="Project"
             />
-            <Link to={link} target="_blank" rel="noopener noreferrer">
+            <>
                 <div
                     className={`absolute bottom-0 left-0 w-full h-28 p-6 flex items-center justify-between bg-gradient-to-r from-[#8750f7] to-[#2a1454] 
                     transform transition-all ease-in-out duration-300
@@ -27,7 +27,7 @@ function AwardDesc({ img, heading, desc, link='#', hovered }) {
                         <i className="bi bi-arrow-up-right text-2xl text-white"></i>
                     </div>
                 </div>
-            </Link>
+            </>
         </div>
     );
 }
