@@ -75,7 +75,7 @@ function FrontPage() {
                 {/* Bottom Section */}
                 <div className="w-full mt-8">
                     <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-between">
-                        {["Final-year student", "MERN stack developer", "Passionate About Tech"].map((text, idx) => (
+                        {["MENTOR(MERN)", "MERN stack Trainer and developer", "Passionate About Tech"].map((text, idx) => (
                             <p key={idx} className="font-bold text-xl md:text-2xl text-center">
                                 {text}
                             </p>
