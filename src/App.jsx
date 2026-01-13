@@ -5,8 +5,6 @@ import Header from "./Components/Navbar";
 import ScrollProgressBar from "./Components/ScrollProgressBar";
 import Footer from "./Components/Footer";
 
-
-
 function App() {
   useEffect(() => {
     // Force reload the app on page refresh

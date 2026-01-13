@@ -1,62 +1,155 @@
+import { useState } from "react";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+
 function Contact() {
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!firstName || !email || !message) {
+            toast.error("Please fill required fields");
+            return;
+        }
+        setLoading(true);
+        setSuccess(false);
+
+        try {
+            const res = await fetch("https://portfolio-backend-two-iota.vercel.app/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    message
+                })
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                toast.success("Message Sent Successfully!");
+                setSuccess(true);
+                // clear form
+                setFirstName("");
+                setLastName("");
+                setEmail("");
+                setPhone("");
+                setMessage("");
+            } else {
+                toast.error(data.msg || "Something went wrong");
+            }
+
+        } catch (error) {
+            toast.error("Server Error");
+        }
+        finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <>
+            <Toaster position="top-center" />
+
             <div id="contact" className="contact bg-[#050709]">
                 <div className="contactMain flex flex-col md:flex-row items-center container mx-auto justify-between py-[5rem] px-4 gap-8">
-                    {/* Left Section */}
+
+                    {/* Left */}
                     <div className="left w-full md:w-[60%]">
                         <div className="w-full bg-[#140c1c] p-[3rem] rounded-2xl shadow-lg">
+
                             <h1 className="text-3xl font-bold text-center text-purple-500 mb-4">
                                 Let's work together!
                             </h1>
-                            <div className="flex items-center justify-center">
-                                <p className="text-center text-white mb-6 w-[90%] text-sm md:text-base">
-                                    I design and code beautifully simple things and I love what I do. Just simple like that!
-                                </p>
-                            </div>
-                            <form>
+
+                            <form onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
                                     <input
                                         type="text"
                                         placeholder="First name"
+                                        value={firstName}
+                                        onChange={(e) => setFirstName(e.target.value)}
                                         className="bg-[#050709] text-white p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
                                     />
+
                                     <input
                                         type="text"
                                         placeholder="Last name"
+                                        value={lastName}
+                                        onChange={(e) => setLastName(e.target.value)}
                                         className="bg-[#050709] text-white p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
                                     />
                                 </div>
+
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+
                                     <input
                                         type="email"
                                         placeholder="Email address"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         className="bg-[#050709] text-white p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
                                     />
+
                                     <input
                                         type="tel"
                                         placeholder="Phone number"
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
                                         className="bg-[#050709] text-white p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
                                     />
                                 </div>
+
                                 <div className="mt-4">
                                     <textarea
                                         placeholder="Message"
                                         rows="4"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
                                         className="w-full bg-[#050709] text-white p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
                                     ></textarea>
                                 </div>
+
                                 <button
                                     type="submit"
-                                    className="mt-6 w-full md:w-[30%] bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold py-3 rounded-lg shadow-md hover:opacity-90 transition-opacity"
+                                    disabled={loading}
+                                    className="cursor-pointer mt-6 w-full md:w-[30%] bg-gradient-to-r 
+  from-purple-500 to-indigo-600 text-white font-bold py-3 rounded-lg 
+  shadow-md transition-all disabled:opacity-60"
                                 >
-                                    Send Message
+                                    {loading ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
+                                            Sending...
+                                        </span>
+                                    ) : success ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            ✅ Sent Successfully
+                                        </span>
+                                    ) : (
+                                        "Send Message"
+                                    )}
                                 </button>
+
                             </form>
                         </div>
                     </div>
 
-                    {/* Right Section */}
+                    {/* RIGHT SECTION SAME — NO CHANGE */}
                     <div className="right w-full md:w-[37%]">
                         <div className="flex flex-col gap-[2rem]">
                             {/* Phone */}
@@ -127,3 +220,6 @@ function Contact() {
 }
 
 export default Contact;
+
+
+
