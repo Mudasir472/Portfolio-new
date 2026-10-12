@@ -9,6 +9,7 @@ import electronics2 from "../assets/electronics2.png";
 import studyMart from "../assets/studyMart.png";
 import studyHive from "../assets/studyHive.png";
 import greenLeaf from "../assets/greenLeaf.png";
+import stack from "../assets/stack.png";
 
 
 function Works() {
@@ -63,6 +64,13 @@ function Works() {
             desc: "Frontend of an ECommerce Website",
             category: ["All", "Frontend"],
             link: "https://green-leaf-market.vercel.app/",
+        },
+        {
+            img: stack,
+            heading: "Stack Visualizer",
+            desc: "A Visualizer for Stack Data Structure",
+            category: ["All", "Frontend"],
+            link: "https://stack-visualizer-one.vercel.app/",
         }
     ];
 
